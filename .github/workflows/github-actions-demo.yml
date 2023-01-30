@@ -1,18 +1,40 @@
-name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: [push]
-jobs:
-  Explore-GitHub-Actions:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
-      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
-      - name: Check out repository code
-        uses: actions/checkout@v3
-      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
-      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
-      - name: List files in the repository
-        run: |
-          ls ${{ github.workspace }}
-      - run: echo "🍏 This job's status is ${{ job.status }}."
+nome: gerar animação
+
+em:
+  # executar automaticamente a cada 12 horas
+  horário:
+    - cron: "0 */12 * * *" 
+  
+  # permite executar manualmente o trabalho a qualquer momento
+  workflow_dispatch:
+  
+  # executar em cada push na ramificação mestre
+  empurrar:
+    filiais:
+    - principal
+    
+  
+
+empregos:
+  gerar:
+    runs-on: ubuntu-mais recente
+    minutos de tempo limite: 10
+    
+    passos:
+      # gera um jogo de cobra a partir de um gráfico de contribuições de um usuário do github (<github_user_name>), produz uma animação svg em <svg_out_path>
+      - nome: Gerar github-contribution-grid-snake.svg
+        utiliza: Platane/snk/svg-only@v2
+        com:
+          github_user_name: ${{ github.repository_owner }}
+          saídas: |
+ dist/github-contribuição-grade-cobra.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+      # empurrar o conteúdo de <build_dir> para uma ramificação
+      # o conteúdo estará disponível em https://raw.githubusercontent.com/<github_user>/<repository>/<target_branch>/<file> , ou como página do github
+      - nome: Empurre github-contribution-grid-snake.svg para a ramificação de saída
+        usa: crazy-max/ghaction-github-pages@v2.6.0
+        com:
+          target_branch: saída
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ segredos. GITHUB_TOKEN }}
