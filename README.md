@@ -6,7 +6,7 @@
 - 📍 Universidade Federal de Sergipe
 
 <div>
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=rafaavinii&show_icons=true&theme=radical&include_all_commits=true&count_private=true" />
+<img height="180em" src="https://github-readme-streak-stats.herokuapp.com?user=rafaavinii&theme=radical&mode=weekly" />
 <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=rafaavinii&langs_count=8&hide=hack&layout=compact&theme=radical" />
 </div>
 
@@ -33,6 +33,13 @@
   <img align="center" alt="Rafa-Js" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg">
   <img align="center" alt="Rafa-Js" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg">
 </div>
+
+## Contacts:
+
+<div> 
+<a href = "mailto:contato.rafaelvinisouza324@gmail.com"> <img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
+<a href="(https://www.linkedin.com/in/rafael-sousa-412357151/)" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white"  target="_blank"></a>  
+</div>&nbsp;&nbsp;
 
 
 
